@@ -43,7 +43,7 @@ environment for `Acme` organization, so we need to create `acme-dev` directory.
     See more in details: http://dev.teracy.org/docs/getting_started.html#teracy-dev-git-clone-and-vagrant-up
 
 
-## Set up Acme apps
+## Set up Acme projects
 
 Stop watching files (Use `Ctrl + c`).
 
@@ -122,8 +122,7 @@ Stop watching files (Use `Ctrl + c`).
 - Now open http://dev.ahw.acme.dev or https://dev.ahw.acme.dev on your browser to see the web
   app and start working on it. For https, you need to add exception into your browsers. This is the
   defined domain from the `angular-hello-world` project for the dev mode. For more information,
-  see README.md from the `angular-hello-world` project.
-
+  see https://github.com/acme101/angular-hello-world/blob/develop/README.md
 
 ## How to start working
 
