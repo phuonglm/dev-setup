@@ -1,6 +1,6 @@
 name 'acme'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Hoat Le'
+maintainer_email 'hoatle at teracy dot com'
 license 'all_rights'
 description 'Installs/Configures acme'
 long_description 'Installs/Configures acme'
