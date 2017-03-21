@@ -113,8 +113,11 @@ Stop watching files (Use `Ctrl + c`).
     $ vagrant hostmanager
     ```
 
-- `$ ping acme.dev` to make sure it pings the right IP of the VM:
+- `$ ping acme.dev` to make sure it pings the right IP address of the VM:
    http://dev.teracy.org/docs/basic_usage.html#ip-address
+
+- `$ cat /etc/hosts` file from the host machine to make sure there is no duplicated entries for
+  `acme-dev` or the VM IP address.
 
 - Now open http://dev.ahw.acme.dev or https://dev.ahw.acme.dev on your browser to see the web
   app and start working on it. For https, you need to add exception into your browsers. This is the
