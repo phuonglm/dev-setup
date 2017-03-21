@@ -38,8 +38,8 @@ environment for `Acme` organization, so we need to create `acme-dev` directory.
     $ vagrant up
     ```
     
-    Note: instead of using `teracy-dev` name as guided, we use `acme-dev` instead. `teracy-dev` should
-    be used by Teracy only.
+    Note: instead of using `teracy-dev` name as guided, we use `acme-dev`. `teracy-dev` should
+    be used for Teracy's projects only.
     See more in details: http://dev.teracy.org/docs/getting_started.html#teracy-dev-git-clone-and-vagrant-up
 
 
