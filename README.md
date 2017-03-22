@@ -45,7 +45,7 @@ environment for `Acme` organization, so we need to create `acme-dev` directory.
 
 ## Set up Acme projects
 
-Stop watching files (Use `Ctrl + c`).
+- Stop watching files (Use `Ctrl + c`) on the file watching terminal window.
 
 - Fork the [acme/angular-hello-world](https://github.com/acme101/angular-hello-world) repo into your
   account.
