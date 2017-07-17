@@ -26,8 +26,8 @@ environment for `Acme` organization, so we need to create `acme-dev` directory.
 
 - Firstly, follow this guide to install required software packages:
     + Remember to skip this step:
-      http://dev.teracy.org/docs/getting_started.html#teracy-dev-git-clone-and-vagrant-up
-    + http://dev.teracy.org/docs/getting_started.html
+      http://dev.teracy.org/docs/develop/getting_started.html#teracy-dev-git-clone-and-vagrant-up
+    + http://dev.teracy.org/docs/develop/getting_started.html
 
 - And then:
 
@@ -35,6 +35,7 @@ environment for `Acme` organization, so we need to create `acme-dev` directory.
     $ cd ~/
     $ git clone https://github.com/teracyhq/dev.git acme-dev
     $ cd acme-dev
+    $ git checkout develop
     $ vagrant up
     ```
     
