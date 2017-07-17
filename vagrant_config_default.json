@@ -1,6 +1,6 @@
 {
   "vagrant": {
-    "config_paths": [ // add paths of Vagrantfile-ext.rb files to be loaded
+    "config_paths": [ // add paths of json config files to be loaded
       // the path must be relative to the Vagrantfile
       "workspace/angular-hello-world/dev-setup/vagrant_config_default.json",
       "workspace/nextjs-hello-world/dev-setup/vagrant_config_default.json"
