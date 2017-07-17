@@ -1,0 +1,46 @@
+{
+  "vagrant": {
+    "config_paths": [ // add paths of Vagrantfile-ext.rb files to be loaded
+      // the path must be relative to the Vagrantfile
+      "workspace/angular-hello-world/dev-setup/vagrant_config_default.json",
+      "workspace/nextjs-hello-world/dev-setup/vagrant_config_default.json"
+    ]
+  },
+  "vm": {
+    "hostname": "acme.dev",
+    "networks": [{
+      "_id": "0",
+      "bridge": [
+        // If it asks for your network interface, add it the right network interface here
+        // to choose it by default, you don't have to choose again when $ vagrant reload
+        // note that if you choose the inactive network interface, problems could happen
+        // then uncomment the line below and $ vagrant reload to select the right one
+        //"en0: Wi-Fi (AirPort)" 
+      ]
+    }]
+  },
+  "vb": {
+    "memory": 2048, // need to adjust for the right optimal MEM
+    "cpus": 2
+  },
+  "provisioners": [{
+    "_id": "0",
+    "_ua_cookbooks_path": [
+      "workspace/dev-setup/chef/main-cookbooks"
+    ],
+    "_ua_run_list": [
+      "vim",
+      "teracy-dev",
+      "acme"
+    ],
+    "json": {
+      "teracy-dev": {
+        "proxy": {
+          "container": {
+            "enabled": true
+          }
+        }
+      }
+    }
+  }]
+}
