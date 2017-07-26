@@ -17,7 +17,7 @@ You can use other software provisioning tools other than Chef, see: https://www.
 $ vagrant ssh
 $ ws
 $ cd dev-setup/chef/
-$ docker run --rm -it -v $(pwd):/opt/app -w /opt/app chef/chefdk /bin/bash
+$ docker run --rm -it -v $(pwd):/opt/app -w /opt/app chef/chefdk bash
 # mkdir main-cookbooks
 # cd main-cookbooks
 # chef generate cookbook acme

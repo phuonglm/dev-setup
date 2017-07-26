@@ -2,3 +2,4 @@
 .delivery/*
 !.delivery/project.toml
 .kitchen
+vagrant_config_override.json

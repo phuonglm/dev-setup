@@ -3,7 +3,10 @@
     "config_paths": [ // add paths of json config files to be loaded
       // the path must be relative to the Vagrantfile
       "workspace/angular-hello-world/dev-setup/vagrant_config_default.json",
-      "workspace/nextjs-hello-world/dev-setup/vagrant_config_default.json"
+      "workspace/nextjs-hello-world/dev-setup/vagrant_config_default.json",
+      "workspace/lemp-starter/dev-setup/vagrant_config_default.json",
+      "workspace/phalcon-starter/dev-setup/vagrant_config_default.json",
+      "workspace/ror-starter/dev-setup/vagrant_config_default.json"
     ]
   },
   "vm": {
