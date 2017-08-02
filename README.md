@@ -57,14 +57,14 @@ environment for `Acme` organization, so we need to create `acme-dev` directory.
     $ cd ~/acme-dev/workspace/
     $ git clone <your_forked_repository_here> angular-hello-world
     $ cd angular-hello-world
-    $ git remote add upstream git@github.com:acme101/angular-hello-world.git
+    $ git remote add upstream https://github.com/acme101/angular-hello-world.git
     ```
 
 - Clone the `acme101/dev-setup` repo into the `~/acme-dev/workspace` directory.
 
     ```bash
     $ cd ~/acme-dev/workspace/
-    $ git clone git@github.com:acme101/dev-setup.git
+    $ git clone https://github.com/acme101/dev-setup.git
     ```
 
 - Type the following command:
