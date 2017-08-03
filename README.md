@@ -67,17 +67,6 @@ environment for `Acme` organization, so we need to create `acme-dev` directory.
     $ git clone https://github.com/acme101/dev-setup.git
     ```
 
-- Type the following command:
-    
-    ```bash
-    $ cd ~/acme-dev
-    $ cp workspace/dev-setup/vagrant_config_override.example.json vagrant_config_override.json
-    ```
-  to create `vagrant_config_override.json` file on the `acme-dev` directory by copying the
-  `workspace/dev-setup/vagrant_config_override.example.json` file (you can then adjust variables
-  to your own need when required)
-
-
 - Reload the Vagrant box to make sure it's updated.
 
     ```bash
