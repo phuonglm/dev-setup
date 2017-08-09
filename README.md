@@ -35,7 +35,7 @@ environment for `Acme` organization, so we need to create `acme-dev` directory.
     $ cd ~/
     $ git clone https://github.com/teracyhq/dev.git acme-dev
     $ cd acme-dev
-    $ git checkout develop
+    $ git checkout v0.5.0-c1
     $ vagrant up
     ```
     
@@ -47,18 +47,6 @@ environment for `Acme` organization, so we need to create `acme-dev` directory.
 ## Set up Acme projects
 
 - Stop watching files (Use `Ctrl + c`) on the file watching terminal window.
-
-- Fork the [acme/angular-hello-world](https://github.com/acme101/angular-hello-world) repo into your
-  account.
-
-- Clone the forked `acme/angular-hello-world` repo into the `~/acme-dev/workspace` directory.
-
-    ```bash
-    $ cd ~/acme-dev/workspace/
-    $ git clone <your_forked_repository_here> angular-hello-world
-    $ cd angular-hello-world
-    $ git remote add upstream https://github.com/acme101/angular-hello-world.git
-    ```
 
 - Clone the `acme101/dev-setup` repo into the `~/acme-dev/workspace` directory.
 
@@ -109,11 +97,6 @@ environment for `Acme` organization, so we need to create `acme-dev` directory.
 - `$ cat /etc/hosts` file from the host machine to make sure there is no duplicated entries for
   `acme-dev` or the VM IP address.
 
-- Now open http://dev.ahw.acme.dev or https://dev.ahw.acme.dev on your browser to see the web
-  app and start working on it. For https, you need to add exception into your browsers. This is the
-  defined domain from the `angular-hello-world` project for the dev mode. For more information,
-  see https://github.com/acme101/angular-hello-world/blob/develop/README.md
-
 ## How to start working
 
 - You can use any text editor or IDE to edit the dropseeker project files
@@ -131,5 +114,3 @@ environment for `Acme` organization, so we need to create `acme-dev` directory.
   + https://www.docker.com/
   + https://github.com/veggiemonk/awesome-docker
 
-- Learn how to work with Angular: https://angular.io/
- 
