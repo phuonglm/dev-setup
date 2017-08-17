@@ -4,27 +4,34 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-if node['kubernetes-stack']['kubernetes']['enabled']
-    kubectl 'install kubectl' do
-      version node['kubernetes-stack']['kubernetes']['version']
+kubectl_opt = node['kubernetes-stack']['kubectl']
+gcloud_opt = node['kubernetes-stack']['gcloud']
+helm_opt = node['kubernetes-stack']['helm']
+
+def sym_action(opt)
+    opt['action'].nil? || opt['action'].strip().empty? ? :install : opt['action'].to_sym
+end
+
+if kubectl_opt['enabled']
+    act = sym_action(gcloud_opt)
+    kubectl "#{act} kubectl #{kubectl_opt['version']}" do
+      version kubectl_opt['version']
+      action act
     end
 end
 
-if node['kubernetes-stack']['gcloud']['enabled']
-    gcloud 'install gcloud' do
-      version node['kubernetes-stack']['gcloud']['version']
-    end
-
-    # fix gsutil temporarily
-    # see: https://github.com/teracyhq-incubator/kubernetes-stack-cookbook/issues/18
-    link '/usr/local/bin/gsutil' do
-      to '/usr/lib/google-cloud-sdk/bin/gsutil'
-      only_if 'test -f /usr/lib/google-cloud-sdk/bin/gsutil'
+if gcloud_opt['enabled']
+    act = sym_action(gcloud_opt)
+    gcloud "#{act} gcloud #{gcloud_opt['version']}" do
+      version gcloud_opt['version']
+      action act
     end
 end
 
-if node['kubernetes-stack']['helm']['enabled']
-    helm 'install helm' do
-      version node['kubernetes-stack']['helm']['version']
+if helm_opt['enabled']
+    act = sym_action(helm_opt)
+    helm "#{act} helm #{helm_opt['version']}" do
+      version helm_opt['version']
+      action act
     end
 end

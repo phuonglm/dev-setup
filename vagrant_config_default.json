@@ -38,19 +38,22 @@
       "acme"
     ],
     "json": {
-      // to work with gcloud and kubernetes
+      // to work with kubernetes
       "kubernetes-stack": {
-        "kubernetes": {
+        "kubectl": {
           "enabled": false,
-          "version": ""
+          "version": "", // latest by default
+          "action": "install" //or "remove"
         },
         "gcloud": {
           "enabled": false,
-          "version": ""
+          "version": "", // latest by default
+          "action": "install" //or "remove"
         },
         "helm": {
           "enabled": false,
-          "version": ""
+          "version": "",
+          "action": "install" //or "remove"
         }
       },
       "teracy-dev": {
