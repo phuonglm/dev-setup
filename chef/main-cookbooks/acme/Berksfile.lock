@@ -1,0 +1,13 @@
+DEPENDENCIES
+  acme
+    path: .
+    metadata: true
+  kubernetes-stack
+    git: https://github.com/teracyhq-incubator/kubernetes-stack-cookbook.git
+    revision: 587f4337a051efa5f919970fb9dc720f49a40229
+    branch: develop
+
+GRAPH
+  acme (0.1.0)
+    kubernetes-stack (>= 0.0.0)
+  kubernetes-stack (0.1.0)

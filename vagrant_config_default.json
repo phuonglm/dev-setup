@@ -18,7 +18,7 @@
         // to choose it by default, you don't have to choose again when $ vagrant reload
         // note that if you choose the inactive network interface, problems could happen
         // then uncomment the line below and $ vagrant reload to select the right one
-        //"en0: Wi-Fi (AirPort)" 
+        //"en0: Wi-Fi (AirPort)"
       ]
     }]
   },
@@ -29,6 +29,7 @@
   "provisioners": [{
     "_id": "0",
     "_ua_cookbooks_path": [
+      "workspace/dev-setup/chef/berks-cookbooks",
       "workspace/dev-setup/chef/main-cookbooks"
     ],
     "_ua_run_list": [
@@ -37,6 +38,21 @@
       "acme"
     ],
     "json": {
+      // to work with gcloud and kubernetes
+      "kubernetes-stack": {
+        "kubernetes": {
+          "enabled": false,
+          "version": ""
+        },
+        "gcloud": {
+          "enabled": false,
+          "version": ""
+        },
+        "helm": {
+          "enabled": false,
+          "version": ""
+        }
+      },
       "teracy-dev": {
         "proxy": {
           "container": {

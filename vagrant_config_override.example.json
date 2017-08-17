@@ -1,0 +1,22 @@
+{
+  "provisioners": [{
+    "_id": "0",
+    "json": {
+      // to work with gcloud and kubernetes
+      "kubernetes-stack": {
+        "kubernetes": {
+          "enabled": true,
+          "version": ""
+        },
+        "gcloud": {
+          "enabled": true,
+          "version": ""
+        },
+        "helm": {
+          "enabled": true,
+          "version": ""
+        }
+      }
+    }
+  }]
+}
