@@ -4,7 +4,7 @@ DEPENDENCIES
     metadata: true
   kubernetes-stack
     git: https://github.com/teracyhq-incubator/kubernetes-stack-cookbook.git
-    revision: 587f4337a051efa5f919970fb9dc720f49a40229
+    revision: 11f8a7a6a98b05cd3326a3443afe32eee7eef977
     branch: develop
 
 GRAPH

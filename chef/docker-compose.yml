@@ -3,7 +3,7 @@ version: '3'
 services:
 
   dev:
-    image: chef/chefdk
+    image: teracy/chefdk
     working_dir: /opt/app
     command: sh run-dev.sh
     volumes:
