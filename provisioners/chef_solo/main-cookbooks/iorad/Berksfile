@@ -1,0 +1,6 @@
+# frozen_string_literal: true
+source 'https://supermarket.chef.io'
+
+metadata
+
+cookbook 'kubernetes-stack', git: "https://github.com/hieptranquoc/kubernetes-stack-cookbook", branch: "feature/#31-add-k8s-resource-to-manage-a-k8s-instance"

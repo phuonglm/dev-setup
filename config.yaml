@@ -1,0 +1,101 @@
+#
+# NOTICES: You better create config_override.yaml file,
+# and copy your would be edit content in to it, then modify your configs there
+#
+vagrant:
+  plugins:
+    - id: 'iorad-dev-setup-0'
+      name: vagrant-cachier
+      config_key: cache
+      required: true
+      enabled: true
+      options: {}
+nodes:
+  - _id: "0"
+    vm:
+      hostname: "%{node_hostname_prefix}.%{node_domain_affix}"
+      networks:
+        - _id: "v05-compat-0"
+          reuse_mac_address: true
+      synced_folders:
+        - _id: "v05-compat-0"
+          _ua_rsync__exclude:
+          - "node_modules"
+          - "bower_components"
+          - iorad/node/static/downloadtutorials/html
+          - iorad/.tmp
+          - iorad/app/scripts/base/templates/dist
+          - iorad/app/scripts/editor/templates/dist
+          - iorad/app/scripts/editor/workers/dist
+          - iorad/app/scripts/player/templates/dist
+          - iorad/app/scripts/player/workers/dist
+          - iorad/node/static/_dist
+          - iorad/node/static/dist
+          - iorad/node/static/assets/css
+          - iorad/node/static/webstart
+          - iorad/node/static/data
+          - iorad/node/static/assets/avatars
+          - iorad/node/webpack-assets.json
+          - target
+          - ".backup-info"
+          - iorad/helm-charts
+          - iorad/scripts
+          - iorad/.cache
+        - _id: "iorad-dev-setup-0"
+          host: "./home/.helm"
+          guest: "/home/vagrant/.helm"
+          mount_options:
+          - dmode=775
+          - fmode=755
+          create: true
+    providers:
+      - _id: "0"
+        enabled: true
+        type: virtualbox
+        memory: 4096
+        cpus: 4
+    provisioners:
+      - _id: 'v05-compat-0'
+        _ua_cookbooks_path:
+          - "%{teracy-dev-iorad-dev-setup-path}/provisioners/chef_solo/berks-cookbooks"
+          - "%{teracy-dev-iorad-dev-setup-path}/provisioners/chef_solo/main-cookbooks"
+        _ua_run_list:
+          - iorad
+        json:
+          docker_compose:
+            version: 1.18.0
+          kubernetes-stack:
+            kubectl:
+              enabled: false
+              version: v1.9.7
+              action: install
+            gcloud:
+              enabled: false
+              version: 194.0.0
+              action: install
+            helm:
+              enabled: false
+              version: v2.9.0
+              action: install
+            kubernetes:
+              enabled: false
+              version: v1.9.7
+              action: install
+              context: minikube
+          teracy-dev:
+            proxy:
+              container:
+                enabled: true
+    plugins:
+      - _id: "iorad-dev-setup-0"
+        name: vagrant-hostmanager
+        config_key: hostmanager
+        enabled: true
+        options:
+          aliases: # set domain aliases for the master node
+          - dev.iorad.local
+          - cdn.iorad.local
+          - webpack.iorad.local
+          - mail.iorad.local
+          - phpmyadmin.iorad.local
+          - storage.iorad.local

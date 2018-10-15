@@ -1,5 +1,0 @@
-source 'https://supermarket.chef.io'
-
-metadata
-
-cookbook "kubernetes-stack", git: "https://github.com/teracyhq-incubator/kubernetes-stack-cookbook.git", branch: "develop"

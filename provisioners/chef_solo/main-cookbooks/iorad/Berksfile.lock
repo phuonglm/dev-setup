@@ -1,0 +1,13 @@
+DEPENDENCIES
+  iorad
+    path: .
+    metadata: true
+  kubernetes-stack
+    git: https://github.com/hieptranquoc/kubernetes-stack-cookbook
+    revision: 8203203908604128f8ce6764bb38388ebe4483b2
+    branch: feature/#31-add-k8s-resource-to-manage-a-k8s-instance
+
+GRAPH
+  iorad (0.1.0)
+    kubernetes-stack (>= 0.0.0)
+  kubernetes-stack (0.2.0-SNAPSHOT)

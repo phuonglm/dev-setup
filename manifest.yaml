@@ -1,0 +1,8 @@
+name: teracy-dev-iorad-dev-setup
+version: "0.1.0-SNAPSHOT"
+description: migration extension from iorad/dev-setup v0.5 to v0.6
+target: ">= 0.6.0-a4"
+# see: https://github.com/teracyhq/dev/issues/498
+dependencies:
+  - name: teracy-dev-v05-compat
+    require_version: ">= 0.1.0-SNAPSHOT"
